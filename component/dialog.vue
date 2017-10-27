@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="fl-dialog-mask" v-if="mshow&&cshow">
+    <div class="fl-dialog-mask" v-if="mshow">
         <div class="fl-dialog">
             <a v-if='pos=="top"' href="javascript:;" class="fl-close" @click="close">&times;</a>
             <slot name="dialog-header"></slot>
@@ -16,7 +16,6 @@ export default {
     data(){
         return {
             pos : this.closepos,
-            cshow : true
         }
     },
     props : ['show','closepos'],
@@ -27,7 +26,6 @@ export default {
     },
     methods: {
         close(){
-            this.cshow = false;
             this.$emit('closecb');
         }
     }
@@ -42,7 +40,7 @@ $opacity: .7;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 200;
+    z-index: 900;
     background: rgba(0,0,0,$opacity);
 }
 .fl-dialog{
