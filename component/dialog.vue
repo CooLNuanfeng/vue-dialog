@@ -1,6 +1,6 @@
 <template lang="html">
-    <div class="fl-dialog-mask" v-if="mshow">
-        <div class="fl-dialog">
+    <div class="fl-dialog-mask" v-if="mshow" @touchmove.stop.prevent>
+        <div class="fl-dialog" @touchmove.stop.prevent>
             <a v-if='pos=="top"' href="javascript:;" class="fl-close" @click="close">&times;</a>
             <slot name="dialog-header"></slot>
             <slot name="dialog-body"></slot>
@@ -45,8 +45,8 @@ $opacity: .7;
 }
 .fl-dialog{
     position: absolute;
-    left: .75rem;
-    right: .75rem;
+    left: 0;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -70,7 +70,7 @@ $opacity: .7;
     bottom: -1.2rem;
     left: 50%;
     margin-left: -.3rem;
-    background: url(http://static2.51fanli.net/webapp/images/coupon/close.png) no-repeat;
+    background: url(http://coolnuanfeng.github.io/assets/images/close.png) no-repeat;
     background-size: 100% 100%;
 
 }
