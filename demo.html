@@ -7,34 +7,12 @@
     <title>Document</title>
 </head>
 <body id="app">
-    <v-dialog closepos="btm" :show="firstdialog" v-on:closecb="firstcbclose">
-        <div slot="dialog-header" class="dlg-h"><img src="./images/dlg-head.png" alt=""></div>
-        <div slot="dialog-body" class="dlg-b" @touchmove.stop>
+    <v-dialog closepos="top" :show="firstdialog" v-on:showcb="showcb" v-on:closecb="firstcbclose">
+        <div slot="body" class="dlg-b">
             <p><span>1.</span>邀请好友购买1元商品，你将获得现金奖励</p>
             <p><span>2.</span>每款商品可邀请多个好友，拿多笔奖励 (奖励将自动放至账户)</p>
             <p><span>3.</span>更多爆款精品等你带回家</p>
         </div>
-        <div slot="dialog-footer" class="dlg-f">
-            <a href="javascipt:;" @click="firstclose">我知道了</a>
-        </div>
-    </v-dialog>
-    <v-dialog closepos="btm" :show="ruledialog">
-        <div slot="dialog-header" class="rule-head"><img src="./images/rule-head.png" alt=""></div>
-        <div slot="dialog-body" class="rule-body" @touchmove.stop>
-            <h4>活动时间说明</h4>
-            <p>每个用户只能购买1件1元购商品。购买多件时，超出部分按原返利比例返利。</p>
-            <h4>活动资格</h4>
-            <p>多件商品合并为一笔订单时，单件商品金额（非单笔订单金额）满足红包条件即可开启红包。</p>
-            <h4>活动资格</h4>
-            <p>多件商品合并为一笔订单时，单件商品金额（非单笔订单金额）满足红包条件即可开启红包。</p>
-            <p>多件商品合并为一笔订单时，单件商品金额（非单笔订单金额）满足红包条件即可开启红包。</p>
-            <h4>活动资格</h4>
-            <p>多件商品合并为一笔订单时，单件商品金额（非单笔订单金额）满足红包条件即可开启红包。</p>
-            <p>多件商品合并为一笔订单时，单件商品金额（非单笔订单金额）满足红包条件即可开启红包。</p>
-            <h4>活动资格</h4>
-            <p>多件商品合并为一笔订单时，单件商品金额（非单笔订单金额）满足红包条件即可开启红包。</p>
-        </div>
-        <div slot="dialog-footer" class="rule-footer"></div>
     </v-dialog>
 </body>
 </html>
