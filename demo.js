@@ -1,13 +1,9 @@
-import vDialog from '../components/dialog/dialog.vue';
 
 var app = new Vue({
     el : '#app',
     data : {
         firstdialog : false,
         ruledialog : false
-    },
-    components: {
-        'v-dialog' : vDialog
     },
     created(){
         this.firstdialog = false;
